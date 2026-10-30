@@ -28,48 +28,40 @@ check hand calculations quickly.
 
 ## Requirements
 
-<!-- TODO: confirm/replace once the toolchain is finalized -->
-
-- A C++17-capable compiler (project targets `g++ -std=c++17`)
-- _Placeholder: list any other dependencies here (e.g., make, CMake) once decided._
+- A C++17 compiler (`g++`)
 
 ---
 
 ## Building
 
-> **Placeholder — to be replaced with real build instructions.**
-
-<!-- TODO: replace the command(s) below with the actual build steps -->
+From the main folder of the repository, run:
 
 ```bash
-# Example / placeholder — not yet confirmed
-g++ -std=c++17 -Wall -Wextra -pedantic -o circuit_solver main.cpp
+g++ -std=c++17 -Wall -Wextra -pedantic -o circuit_solver src/main.cpp
 ```
 
 ---
 
 ## Running
 
-> **Placeholder — to be replaced with real run instructions.**
-
-<!-- TODO: replace with the actual run command and any arguments -->
-
 ```bash
-# Example / placeholder — not yet confirmed
 ./circuit_solver
 ```
 
+On Windows PowerShell, run `.\circuit_solver.exe` instead.
+
 When the program starts, it presents a text menu. Each menu option runs exactly one
-task.
+task. Tasks that are not finished yet print "not implemented yet".
 
 ```
 === Circuit Solver ===
-<!-- TODO: fill in the real menu once finalized -->
 1. Load netlist from file
 2. Enter netlist from terminal
-3. Solve circuit
-4. Display results (node voltages, branch currents, power)
-5. ...
+3. Display current circuit
+4. Validate circuit
+5. Solve circuit
+6. Display results
+7. Load example circuit
 0. Exit
 ```
 
