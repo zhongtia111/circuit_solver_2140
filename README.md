@@ -37,7 +37,7 @@ check hand calculations quickly.
 From the main folder of the repository, run:
 
 ```bash
-g++ -std=c++17 -Wall -Wextra -pedantic -o circuit_solver src/main.cpp
+g++ -std=c++17 -Wall -Wextra -pedantic -Iinclude src/*.cpp -o circuit_solver
 ```
 
 ---
@@ -108,16 +108,25 @@ Branch Currents / Power
 
 ## Project Structure
 
-<!-- TODO: update to match the actual files/folders as the code is written -->
 
 ```
 circuit_solver_2140/
-├── src/                  # source code (placeholder layout)
-│   ├── main.cpp
-│   ├── parser.*          # netlist parsing & validation
-│   ├── solver.*          # nodal analysis + Gaussian elimination
-│   └── output.*          # results display
-├── tests/                # test circuits with hand-calculated answers
+├── include/              # header files
+│   ├── tasks.h           # task1() to task7(), one per menu option
+│   ├── circuit.h         # Component and Circuit classes
+│   ├── parser.h          # Parser class (file and terminal input)
+│   ├── validate.h        # Validator class
+│   ├── solver.h          # Solver class (nodal analysis, currents, power)
+│   └── output.h          # Output class (results display)
+├── src/                  # source files
+│   ├── main.cpp          # menu and switch
+│   ├── tasks.cpp
+│   ├── circuit.cpp
+│   ├── parser.cpp
+│   ├── validate.cpp
+│   ├── solver.cpp
+│   └── output.cpp
+├── tests/                # example circuit and test netlists with expected answers
 ├── docs/                 # PDF report and Excel project plan
 └── README.md
 ```
