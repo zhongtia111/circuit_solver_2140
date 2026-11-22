@@ -1,0 +1,8 @@
+# Example circuit for menu option 7
+# 10 V source, R1 feeds R2 and R3 in parallel
+V1 1 0 10
+R1 1 2 1000
+R2 2 0 2000
+R3 2 0 2000
+# Expected node voltages: V(1) = 10 V, V(2) = 5 V
+# Expected currents: I(R1) = 5 mA, I(R2) = 2.5 mA, I(R3) = 2.5 mA
