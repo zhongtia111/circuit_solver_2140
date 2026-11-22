@@ -2,35 +2,8 @@
 // EECE 2140 Team 02
 
 #include <iostream>
+#include "tasks.h"
 using namespace std;
-
-void loadFromFile() {
-    cout << "Load netlist from file: not implemented yet" << endl;
-}
-
-void enterFromTerminal() {
-    cout << "Enter netlist from terminal: not implemented yet" << endl;
-}
-
-void displayCircuit() {
-    cout << "Display current circuit: not implemented yet" << endl;
-}
-
-void validateCircuit() {
-    cout << "Validate circuit: not implemented yet" << endl;
-}
-
-void solveCircuit() {
-    cout << "Solve circuit: not implemented yet" << endl;
-}
-
-void displayResults() {
-    cout << "Display results: not implemented yet" << endl;
-}
-
-void loadExample() {
-    cout << "Load example circuit: not implemented yet" << endl;
-}
 
 void showMenu() {
     cout << endl;
@@ -63,25 +36,25 @@ int main() {
 
         switch (choice) {
             case 1:
-                loadFromFile();
+                task1();
                 break;
             case 2:
-                enterFromTerminal();
+                task2();
                 break;
             case 3:
-                displayCircuit();
+                task3();
                 break;
             case 4:
-                validateCircuit();
+                task4();
                 break;
             case 5:
-                solveCircuit();
+                task5();
                 break;
             case 6:
-                displayResults();
+                task6();
                 break;
             case 7:
-                loadExample();
+                task7();
                 break;
             case 0:
                 cout << "Goodbye!" << endl;
